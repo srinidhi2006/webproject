@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Online Book Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background-color: #efdecd;
+      color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    
+    .contact-container {
+      flex: 2;
+      margin-right: 30px;
+      background: #ffffff;
+      max-width: 900px;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .contact-container:hover {
+      transform: translateY(-5px);
+    }
+   
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #8b6e55;
+      font-size: 2.5em;
+      position: relative;
+      padding-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    h1:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(to right, #8b6e55, #c9b199);
+      border-radius: 3px;
+    }
+    
+    p.description {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.2em;
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+    
+    .grid-item {
+      background: #f9f5f0;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+    }
+    
+    .grid-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid #8b6e55;
+    }
+    
+    .grid-item h2 {
+      margin-bottom: 15px;
+      color: #8b6e55;
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+    
+    .grid-item p {
+      margin-bottom: 20px;
+      color: #666;
+      line-height: 1.5;
+      font-size: 1.05em;
+    }
+    
+    button {
+      background-color: #8b6e55;
+      color: white;
+      padding: 12px 22px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      font-size: 1em;
+      letter-spacing: 0.5px;
+    }
+    
+    button:hover {
+      background-color: #7a5f48;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(139, 110, 85, 0.2);
+    }
+    
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .live-chat-feature {
+      flex: 1;
+      background: linear-gradient(to bottom, #ffffff, #f7f1ea);
+      padding: 35px 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      position: sticky;
+      top: 40px;
+      height: 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .live-chat-feature:hover {
+      transform: translateY(-5px);
+    }
+    
+    .live-chat-feature img {
+      width: 120px;
+      margin-bottom: 25px;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 5px;
+      background: white;
+    }
+    
+    .live-chat-feature h3 {
+      color: #8b6e55;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .live-chat-feature p {
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-size: 1.1em;
+      padding: 0 10px;
+    }
+    
+    .live-chat-feature button {
+      background-color: #8b6e55;
+      color: white;
+      padding: 14px 28px;
+      font-size: 1.1em;
+    }
+    
+    @media (max-width: 1024px) {
+      body {
+        flex-direction: column;
+        padding: 20px;
+      }
+      
+      .contact-container {
+        margin-right: 0;
+        margin-bottom: 30px;
+        width: 100%;
+      }
+      
+      .live-chat-feature {
+        width: 100%;
+        position: static;
+        height: auto;
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <h1>Contact Our Support Team</h1>
+    <p class="description">We are here to assist you with any questions about our online book store services.</p>
+
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Technical Support</h2>
+        <p>Need help with technical issues or troubleshooting? Our expert team is ready to assist you with any platform-related concerns.</p>
+        <button>Get Technical Support</button>
+      </div>
+      <div class="grid-item">
+        <h2>Pricing & Billing</h2>
+        <p>Have questions about pricing, payment methods, or managing your account? Our billing specialists are here to help.</p>
+        <button>Contact Billing</button>
+      </div>
+      <div class="grid-item">
+        <h2>General Inquiries</h2>
+        <p>Want to share feedback, suggest new features, or have general questions about our services? We'd love to hear from you.</p>
+        <button >Send Inquiry</button>
+      </div>
+    </div>
+  </div>  
+  
+  <div class="live-chat-feature">
+    
+    <h3>Need Instant Help?</h3>
+    <p>Our friendly support agents are available 24/7 to assist you with any questions or concerns you might have.</p>
+    
+    <button >Start Live Chat</button>
+  </div>
+</body>
+</html>
